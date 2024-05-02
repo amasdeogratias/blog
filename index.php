@@ -92,6 +92,17 @@ include './partials/header.php';
             </article>
         </div> 
     </section>
+
+    <section class="category__buttons">
+        <div class="container category__buttons-container">
+            <a href="" class="category__button">Art</a>
+            <a href="" class="category__button">Music</a>
+            <a href="" class="category__button">Wild Life</a>
+            <a href="" class="category__button">Food</a>
+            <a href="" class="category__button">Science and Technology</a>
+            <a href="" class="category__button">Politics</a>
+        </div>
+    </section>
 <?php
 include './partials/footer.php';
 ?>
