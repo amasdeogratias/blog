@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3f2ac493-8bfb-4d72-9b9d-a9191bfb0529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/constants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/signin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +69,8 @@
       <workItem from="1714718963292" duration="92000" />
       <workItem from="1714739109548" duration="215000" />
       <workItem from="1714739402498" duration="1592000" />
-      <workItem from="1714741251491" duration="291000" />
+      <workItem from="1714741251491" duration="1745000" />
+      <workItem from="1714743033361" duration="1600000" />
     </task>
     <servers />
   </component>
