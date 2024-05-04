@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f2ac493-8bfb-4d72-9b9d-a9191bfb0529" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin.php" beforeDir="false" afterPath="$PROJECT_DIR$/signin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +69,10 @@
       <workItem from="1714739109548" duration="215000" />
       <workItem from="1714739402498" duration="1592000" />
       <workItem from="1714741251491" duration="1745000" />
-      <workItem from="1714743033361" duration="1600000" />
+      <workItem from="1714743033361" duration="1736000" />
+      <workItem from="1714744815498" duration="14000" />
+      <workItem from="1714804995488" duration="1453000" />
+      <workItem from="1714806762037" duration="1652000" />
     </task>
     <servers />
   </component>
@@ -86,5 +88,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1714464909064" />
+    <state x="1143" y="76" width="585" height="888" key="find.popup" timestamp="1714744447955">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1143" y="76" width="585" height="888" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1714744447955" />
   </component>
 </project>
