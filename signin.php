@@ -16,9 +16,16 @@
         <section class="form__section">
             <div class="container form__section-container">
                 <h2>Sign In</h2>
+                <?php
+                session_start();
+                if (isset($_SESSION['signup-success'])){ ?>
                 <div class="alert__message success">
-                    <p>This is an success message</p>
+                    <?php
+                    echo $_SESSION['signup-success'];
+                    unset($_SESSION['signup-success']);
+                    ?>
                 </div>
+                <?php } ?>
                 <form action="" method="post">
                     <input type="email" placeholder="Username or Email">
                     <input type="password" placeholder="Password">

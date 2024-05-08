@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f2ac493-8bfb-4d72-9b9d-a9191bfb0529" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/signup-logic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/signup.php" beforeDir="false" afterPath="$PROJECT_DIR$/signup.php" afterDir="false" />
     </list>
@@ -32,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GlobalPay" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -73,21 +74,44 @@
       <workItem from="1714744815498" duration="14000" />
       <workItem from="1714804995488" duration="1453000" />
       <workItem from="1714806762037" duration="1652000" />
+      <workItem from="1714809129470" duration="73000" />
+      <workItem from="1714994875200" duration="630000" />
+      <workItem from="1714996120184" duration="1779000" />
+      <workItem from="1714997933568" duration="1776000" />
+      <workItem from="1714999748582" duration="1778000" />
+      <workItem from="1715002828924" duration="1569000" />
+      <workItem from="1715063687532" duration="382000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="1138" y="163" key="#PHP" timestamp="1714463978134">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1138" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1714463978134" />
-    <state x="1265" y="443" key="NewPhpFileDialog" timestamp="1714464909064">
+    <state x="1215" y="275" key="FileChooserDialogImpl" timestamp="1715064076016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1714464909064" />
+    <state x="1215" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1715064076016" />
+    <state x="1265" y="443" key="NewPhpFileDialog" timestamp="1714995298021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1714995298020" />
     <state x="1143" y="76" width="585" height="888" key="find.popup" timestamp="1714744447955">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
