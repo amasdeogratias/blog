@@ -1,5 +1,4 @@
 <?php
-session_start();
 include 'config/constants.php';
 
 //if error
@@ -9,6 +8,9 @@ $username = $_SESSION['signup-data']['username'] ?? null;
 $email = $_SESSION['signup-data']['email'] ?? null;
 $password = $_SESSION['signup-data']['password'] ?? null;
 $confirm_password = $_SESSION['signup-data']['confirm-password'] ?? null;
+
+//unset or delete signup session
+unset($_SESSION['signup-data'])
 ?>
 <!DOCTYPE html>
 <html lang="en">
