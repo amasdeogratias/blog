@@ -25,15 +25,19 @@ require './config/database.php';
                 <li><a href="<?= ROOT_URL ?>services.php">Services</a> </li>
                 <li><a href="<?= ROOT_URL ?>contact.php">Contact</a> </li>
                 <li><a href="<?= ROOT_URL ?>signin.php">Signin</a> </li>
-                <li class="nav__profile">
-                    <div class="avatar">
-                        <img src="./images/avatar1.jpg">
-                    </div>
-                    <ul>
-                        <li><a href="<?= ROOT_URL ?>admin/dashboard.php">Dashboard</a> </li>
-                        <li><a href="<?= ROOT_URL ?>logout.php">Logout</a> </li>
-                    </ul>
-                </li>
+                <?php
+                if (isset($_SESSION['user_id'])){
+                    ?>
+                    <li class="nav__profile">
+                        <div class="avatar">
+                            <img src="<?= ROOT_URL ?>/images/avatar1.jpg">
+                        </div>
+                        <ul>
+                            <li><a href="<?= ROOT_URL ?>admin/dashboard.php">Dashboard</a> </li>
+                            <li><a href="<?= ROOT_URL ?>logout.php">Logout</a> </li>
+                        </ul>
+                    </li>
+                <?php }  ?>
             </ul>
 
             <button id="open__nav-btn"><i class="uil uil-bars"></i> </button>

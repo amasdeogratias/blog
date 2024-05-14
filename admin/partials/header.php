@@ -1,4 +1,5 @@
 <?php
+session_start();
 require './config/database.php';
 ?>
 <!DOCTYPE html>
@@ -24,7 +25,14 @@ require './config/database.php';
             <li><a href="<?= ROOT_URL ?>about.php">About</a> </li>
             <li><a href="<?= ROOT_URL ?>services.php">Services</a> </li>
             <li><a href="<?= ROOT_URL ?>contact.php">Contact</a> </li>
+            <?php
+            if ($_SESSION['user_id'] ==null):
+            ?>
             <li><a href="<?= ROOT_URL ?>signin.php">Signin</a> </li>
+            <?php endif; ?>
+            <?php
+                if ($_SESSION['user_id'] !=null):
+            ?>
             <li class="nav__profile">
                 <div class="avatar">
                     <img src="<?= ROOT_URL ?>/images/avatar1.jpg">
@@ -34,6 +42,7 @@ require './config/database.php';
                     <li><a href="<?= ROOT_URL ?>logout.php">Logout</a> </li>
                 </ul>
             </li>
+            <?php endif; ?>
         </ul>
 
         <button id="open__nav-btn"><i class="uil uil-bars"></i> </button>
