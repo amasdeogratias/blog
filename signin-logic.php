@@ -31,7 +31,7 @@ global $connect;
                     $_SESSION['user_is_admin'] = true;
                 }
                 //log user in
-                header('location: ' . ROOT_URL . 'admin/');
+                header('location: ' . ROOT_URL . 'admin/dashboard.php');
             }else {
                 $_SESSION['signin'] = "Please enter correct password";
             }
