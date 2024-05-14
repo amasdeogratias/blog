@@ -524,6 +524,20 @@ input, textarea, select {
     transition: var(--transition);
     color: var(--color-white);
 }
+
+.btn.sm {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+.btn.danger {
+    background: var(--color-red);
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+}
 .form__section small{
     margin-top: 1rem;
     display: block;
@@ -533,3 +547,27 @@ input, textarea, select {
 .form__section small a {
     color: var(--color-primary);
 }
+
+/* ADMIN DASHBOARD CSS */
+.dashboard {
+    margin: 6rem;
+}
+
+.dashboard__container {
+    display: grid;
+    grid-template-columns: 14rem auto;
+    gap: 1rem;
+    background: var(--color-gray-900);
+    padding: 2rem;
+    margin-bottom: 5rem;
+}
+
+.dashboard aside a {
+    background: var(--color-primary);
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.dashboard aside ul li {}
