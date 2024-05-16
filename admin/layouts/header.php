@@ -1,6 +1,9 @@
 <?php
 session_start();
 require './config/database.php';
+if(!isset($_SESSION['user_id'])){
+    header("location:" . ROOT_URL . 'index.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

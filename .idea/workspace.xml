@@ -19,7 +19,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f2ac493-8bfb-4d72-9b9d-a9191bfb0529" name="Default Changelist" comment="" />
+    <list default="true" id="3f2ac493-8bfb-4d72-9b9d-a9191bfb0529" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/layouts/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/dashboard.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/partials/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layouts/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/partials/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layouts/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +55,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GlobalPay" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../payroll1" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -109,7 +117,22 @@
       <workItem from="1715675927134" duration="1775000" />
       <workItem from="1715677738067" duration="1272000" />
       <workItem from="1715684196896" duration="2774000" />
-      <workItem from="1715693750476" duration="1485000" />
+      <workItem from="1715693750476" duration="1813000" />
+      <workItem from="1715756196655" duration="613000" />
+      <workItem from="1715758617408" duration="1601000" />
+      <workItem from="1715761350690" duration="718000" />
+      <workItem from="1715764188304" duration="589000" />
+      <workItem from="1715771648475" duration="1224000" />
+      <workItem from="1715776115257" duration="1771000" />
+      <workItem from="1715778125490" duration="435000" />
+      <workItem from="1715844861657" duration="950000" />
+      <workItem from="1715845992606" duration="868000" />
+      <workItem from="1715847843159" duration="1474000" />
+      <workItem from="1715850044634" duration="1446000" />
+      <workItem from="1715851817050" duration="1493000" />
+      <workItem from="1715857462038" duration="234000" />
+      <workItem from="1715857745607" duration="1528000" />
+      <workItem from="1715859403062" duration="591000" />
     </task>
     <servers />
   </component>
@@ -133,17 +156,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1138" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1714463978134" />
-    <state x="1215" y="275" key="FileChooserDialogImpl" timestamp="1715064076016">
+    <state x="1215" y="275" key="FileChooserDialogImpl" timestamp="1715778561881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1215" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1715064076016" />
-    <state x="1265" y="443" key="NewPhpFileDialog" timestamp="1715260072629">
+    <state x="1215" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1715778561881" />
+    <state x="1265" y="443" key="NewPhpFileDialog" timestamp="1715847749346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1715260072629" />
-    <state x="1143" y="76" width="585" height="888" key="find.popup" timestamp="1714744447955">
+    <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1715847749346" />
+    <state x="1143" y="76" width="585" height="888" key="find.popup" timestamp="1715777536805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1143" y="76" width="585" height="888" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1714744447955" />
+    <state x="1143" y="76" width="585" height="888" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1715777536805" />
   </component>
 </project>
