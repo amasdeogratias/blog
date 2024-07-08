@@ -246,6 +246,48 @@ nav button {
     text-align: center;
 }
 
+/* Blog Page Css/ Search */
+.search__bar {
+    margin-top: 7rem;
+}
+
+.search__bar-container {
+    position: relative;
+    width: 30rem;
+    background: var(--color-gray-900);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 0.6rem 1rem;
+    border-radius: var(--card-border-radius-2);
+    color: var(--color-gray-300);
+}
+
+.search__bar-container > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search__bar input {
+    background: transparent;
+    margin-left: 0.7rem;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+.search__bar input::placeholder {
+    color: var(--color-gray-300);
+}
+/* Empty pages css */
+.empty__page {
+    height: 70vh;
+    place-content: center;
+    display: grid;
+}
+
 /* Footer CSS ===*/
 footer {
     background: var(--color-gray-900);
