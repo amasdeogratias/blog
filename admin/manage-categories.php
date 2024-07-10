@@ -1,5 +1,13 @@
 <?php
 include './layouts/header.php';
+
+//fetch categories
+$query = "SELECT * FROM categories ORDER BY id";
+$result = mysqli_query($connect, $query);
+$Categories = array();
+while($rows = mysqli_fetch_assoc($result)){
+    $Categories[] = $rows;
+}
 ?>
 <section class="dashboard">
     <div class="container dashboard__container">
@@ -19,22 +27,20 @@ include './layouts/header.php';
                 </tr>
                 </thead>
                 <tbody>
+                <?php
+                $i=1;
+                    foreach ($Categories as $key => $values){
+                        
+                ?>
                 <tr>
-                    <td>1</td>
-                    <td>Travel</td>
+                    <td><?php echo $i++; ?></td>
+                    <td><?php echo $values['title']; ?></td>
                     <td>
-                        <a href="" class="btn sm">Edit</a>
+                        <a href="edit-category.php" class="btn sm">Edit</a>
                         <a href="" class="btn sm danger">Delete</a>
                     </td>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Wild Life</td>
-                    <td>
-                        <a href="" class="btn sm">Edit</a>
-                        <a href="" class="btn sm danger">Delete</a>
-                    </td>
-                </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </main>
