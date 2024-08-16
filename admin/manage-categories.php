@@ -20,6 +20,24 @@ while($rows = mysqli_fetch_assoc($result)){
             ?>
         </p>
     </div>
+    <?php elseif(isset($_SESSION['add-category'])):
+    ?>
+    <div class="alert__message error container">
+        <p>
+            <?= $_SESSION['add-category'];
+            unset($_SESSION['add-category']);
+            ?>
+        </p>
+    </div>
+    <?php elseif(isset($_SESSION['edit-category-success'])):
+        ?>
+        <div class="alert__message success container">
+            <p>
+                <?= $_SESSION['edit-category-success'];
+                unset($_SESSION['edit-category-success']);
+                ?>
+            </p>
+        </div>
     <?php endif; ?>
     <div class="container dashboard__container">
         <button class="sidebar__toggle" id="show__sidebar-btn"><i class="uil uil-angle-right-b"></i></button>
