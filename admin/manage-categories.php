@@ -38,6 +38,15 @@ while($rows = mysqli_fetch_assoc($result)){
                 ?>
             </p>
         </div>
+    <?php elseif(isset($_SESSION['delete-category-category'])):
+        ?>
+        <div class="alert__message success container">
+            <p>
+                <?= $_SESSION['delete-category-category'];
+                unset($_SESSION['delete-category-category']);
+                ?>
+            </p>
+        </div>
     <?php endif; ?>
     <div class="container dashboard__container">
         <button class="sidebar__toggle" id="show__sidebar-btn"><i class="uil uil-angle-right-b"></i></button>
@@ -66,7 +75,7 @@ while($rows = mysqli_fetch_assoc($result)){
                     <td><?php echo $values['title']; ?></td>
                     <td>
                         <a href="edit-category.php?id=<?=$values['id']?>" class="btn sm">Edit</a>
-                        <a href="" class="btn sm danger">Delete</a>
+                        <a href="delete-category.php?id=<?=$values['id']?>" class="btn sm danger">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>
