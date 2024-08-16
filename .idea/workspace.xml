@@ -20,10 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f2ac493-8bfb-4d72-9b9d-a9191bfb0529" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/add-category-logic.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/edit-category-logic.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/add-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/add-category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/config/constants.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/edit-category.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/edit-category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/layouts/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/layouts/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/manage-categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/manage-categories.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +53,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../payroll1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../field_tracker_web" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -158,6 +158,28 @@
       <workItem from="1720599157675" duration="1710000" />
       <workItem from="1720601658798" duration="1653000" />
       <workItem from="1720616001474" duration="904000" />
+      <workItem from="1720620746317" duration="667000" />
+      <workItem from="1720678805525" duration="593000" />
+      <workItem from="1720693555335" duration="1136000" />
+      <workItem from="1720697015824" duration="581000" />
+      <workItem from="1720700211551" duration="376000" />
+      <workItem from="1721397219281" duration="759000" />
+      <workItem from="1721457662411" duration="510000" />
+      <workItem from="1721645797466" duration="2337000" />
+      <workItem from="1721648171736" duration="20000" />
+      <workItem from="1721824394604" duration="1400000" />
+      <workItem from="1721826297740" duration="835000" />
+      <workItem from="1721829380761" duration="45000" />
+      <workItem from="1721994470859" duration="358000" />
+      <workItem from="1722064338018" duration="1361000" />
+      <workItem from="1722066042819" duration="1769000" />
+      <workItem from="1722068049556" duration="52000" />
+      <workItem from="1722512829233" duration="8000" />
+      <workItem from="1722513384459" duration="318000" />
+      <workItem from="1722514391251" duration="242000" />
+      <workItem from="1723807605318" duration="1609000" />
+      <workItem from="1723809352177" duration="1525000" />
+      <workItem from="1723811135666" duration="649000" />
     </task>
     <servers />
   </component>
@@ -177,18 +199,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1138" y="163" key="#PHP" timestamp="1714463978134">
+    <state x="1215" y="275" key="FileChooserDialogImpl" timestamp="1722514642506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1138" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1714463978134" />
-    <state x="1215" y="275" key="FileChooserDialogImpl" timestamp="1715778561881">
+    <state x="1215" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1722514642506" />
+    <state x="1265" y="443" key="NewPhpFileDialog" timestamp="1723809624810">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1215" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1715778561881" />
-    <state x="1265" y="443" key="NewPhpFileDialog" timestamp="1715847749346">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1715847749346" />
+    <state x="1265" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1723809624810" />
     <state x="1143" y="76" width="585" height="888" key="find.popup" timestamp="1715777536805">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
