@@ -24,7 +24,11 @@ require './config/database.php';
                 <li><a href="<?= ROOT_URL ?>about.php">About</a> </li>
                 <li><a href="<?= ROOT_URL ?>services.php">Services</a> </li>
                 <li><a href="<?= ROOT_URL ?>contact.php">Contact</a> </li>
-                <li><a href="<?= ROOT_URL ?>signin.php">Signin</a> </li>
+                <?php
+                if(!isset($_SESSION['user_id'])){?>
+                    <li><a href="<?= ROOT_URL ?>signin.php">Signin</a> </li>
+                <?php } ?>
+                
                 <?php
                 if (isset($_SESSION['user_id'])){
                     ?>
