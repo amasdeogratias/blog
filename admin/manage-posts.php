@@ -1,12 +1,9 @@
 <?php
 include './layouts/header.php';
 
-$query = "SELECT p.id as Id, p.title as name, c.title as title FROM posts p, categories c WHERE p.category_id=c.id ORDER BY p.id";
-$result = mysqli_query($connect, $query);
-$Posts = array();
-while($rows = mysqli_fetch_assoc($result)){
-    $Posts[] = $rows;
-}
+$query = "SELECT * FROM posts ORDER BY id";
+$post_result = mysqli_query($connect, $query);
+
 ?>
 <section class="dashboard">
     <?php
@@ -67,16 +64,19 @@ while($rows = mysqli_fetch_assoc($result)){
                 <tbody>
                 <?php
                 $i=1;
-                    foreach ($Posts as $key => $values){
-                        
+                while($values = mysqli_fetch_assoc($post_result)){
+                       $category_id = $values['category_id'];
+                       $category_query = "SELECT title FROM categories WHERE id=$category_id";
+                       $category_result = mysqli_query($connect, $category_query);
+                       $category = mysqli_fetch_assoc($category_result); 
                 ?>
                 <tr>
                     <td><?php echo $i++; ?></td>
-                    <td><?php echo $values['name']; ?></td>
                     <td><?php echo $values['title']; ?></td>
+                    <td><?php echo $category['title']; ?></td>
                     <td>
-                        <a href="edit-post.php?id=<?=$values['Id']?>" class="btn sm">Edit</a>
-                        <a href="delete-post.php?id=<?=$values['Id']?>" class="btn sm danger">Delete</a>
+                        <a href="<?=ROOT_URL ?>admin/edit-post.php?id=<?=$values['id']?>" class="btn sm">Edit</a>
+                        <a href="<?=ROOT_URL ?>admin/delete-post.php?id=<?=$values['id']?>" class="btn sm danger">Delete</a>
                     </td>
                 </tr>
                 <?php } ?>
