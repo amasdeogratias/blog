@@ -11,6 +11,8 @@ if (isset($_POST['submit'])){
     $thumbnail = $_FILES['thumbnail'];
     $date = date('Y-m-d H:i:s');
 
+    $featured = $featured == 1 ? : 0;
+
     if(!$title) {
         $_SESSION['add-post'] = "Enter post title";
     }elseif (!$body) {
