@@ -33,7 +33,7 @@ if (isset($_POST['submit'])){
         $time = time();
         $file_name = $time. $thumbnail['name'];
         $tmp_name = $thumbnail['tmp_name'];
-        $destination_path = "./uploads/". $file_name;
+        $destination_path = "../images/". $file_name;
 
         //allowed files
         $allowed_files = ['png', 'jpg', 'jpeg'];

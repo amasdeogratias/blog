@@ -26,7 +26,7 @@ if (isset($_POST['submit'])){
     }else{
         //delete existing thumbnail if new thumbnail is available
         if($thumbnail['name']){
-            $previous_thumbnail_path = "./uploads/".$previous_thumbnail_name;
+            $previous_thumbnail_path = "../images/".$previous_thumbnail_name;
             if($previous_thumbnail_path){
                 unlink($previous_thumbnail_path);
             }
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])){
             $time = time();
             $file_name = $time. $thumbnail['name'];
             $tmp_name = $thumbnail['tmp_name'];
-            $destination_path = "./uploads/". $file_name;
+            $destination_path = "../images/". $file_name;
     
             //allowed files
             $allowed_files = ['png', 'jpg', 'jpeg'];

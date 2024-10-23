@@ -11,7 +11,7 @@ if(isset($_GET['id'])){
     if(mysqli_num_rows($result) == 1){
         $post = mysqli_fetch_assoc($result);
         $thumbnail = $post['thumbnail'];
-        $thumbnail_path = "./uploads/".$thumbnail;
+        $thumbnail_path = "../images/".$thumbnail;
 
         if($thumbnail_path){
             unlink($thumbnail_path);
