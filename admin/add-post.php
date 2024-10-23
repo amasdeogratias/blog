@@ -35,7 +35,7 @@ while($rows = mysqli_fetch_assoc($result)){
                     <option value="<?php echo $value['id'] ?>"><?php echo $value['title'] ?></option>
                 <?php }?>
             </select>
-            <textarea name="body" id="body" value="<?php echo $body?>"  rows="4"></textarea>
+            <textarea name="body" id="body" value="<?php echo $body?>"  rows="4"><?php echo $body?></textarea>
             <?php if(isset($_SESSION['user_is_admin'])) {?>
                 <div class="form__control inline">
                     <input type="checkbox" name="is_featured" id="is_featured" value="1" checked>
