@@ -1,4 +1,5 @@
 <?php
+require './layouts/is_admin.php';
 include './layouts/header.php';
 //get back form data if invalid
 $firstname = $_SESSION['add-user-data']['firstname'] ?? null;

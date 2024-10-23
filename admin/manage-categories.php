@@ -1,4 +1,5 @@
 <?php
+require './layouts/is_admin.php';
 include './layouts/header.php';
 
 //fetch categories

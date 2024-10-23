@@ -1,4 +1,5 @@
 <?php
+require './layouts/is_admin.php';
 include './layouts/header.php';
 //get back form data if invalid
 if(isset($_GET['id'])){
