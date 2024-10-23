@@ -21,7 +21,7 @@ if(isset($_GET['id'])){
             $delete_result = mysqli_query($connect, $delete_query);
 
             if(!mysqli_errno($connect)){
-                $_SESSION['delete-post-post'] = "Post deleted successfully";
+                $_SESSION['delete-post-success'] = "Post deleted successfully";
             }
         }
     }
