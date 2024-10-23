@@ -19,6 +19,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <i class="uil uil-postcard"></i> <h5>Manage Posts</h5>
             </a>
         </li>
+        <?php if(isset($_SESSION['user_is_admin'])):?>
         <li>
             <a href="add-user.php" class="<?php echo ($current_page == 'add-user.php') ? 'active' : ''; ?>">
                 <i class="uil uil-user-plus"></i> <h5>Add User</h5>
@@ -39,5 +40,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <i class="uil uil-list-ul"></i> <h5>Manage Categories</h5>
             </a>
         </li>
+        <?php endif;?>
     </ul>
 </aside>
