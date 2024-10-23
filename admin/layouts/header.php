@@ -3,6 +3,12 @@ require './config/database.php';
 if(!isset($_SESSION['user_id'])){
     header("location:" . ROOT_URL . 'index.php');
 }
+
+$id = filter_var($_SESSION['user_id'], FILTER_SANITIZE_NUMBER_INT);
+$query = "SELECT avatar FROM users WHERE id=$id";
+$result = mysqli_query($connect, $query);
+$user = mysqli_fetch_assoc($result);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,29 +27,24 @@ if(!isset($_SESSION['user_id'])){
 <body>
 <nav>
     <div class="container nav__container">
-        <a href="<?= ROOT_URL ?>index.php" class="nav__log">My Blog</a>
+        <a href="<?= ROOT_URL ?>" class="nav__log">My Blog</a>
         <ul class="nav__items">
             <li><a href="<?= ROOT_URL ?>blog.php">Blog</a> </li>
             <li><a href="<?= ROOT_URL ?>about.php">About</a> </li>
             <li><a href="<?= ROOT_URL ?>services.php">Services</a> </li>
             <li><a href="<?= ROOT_URL ?>contact.php">Contact</a> </li>
-            <?php
-            if ($_SESSION['user_id'] ==null):
-            ?>
-            <li><a href="<?= ROOT_URL ?>signin.php">Signin</a> </li>
-            <?php endif; ?>
-            <?php
-                if ($_SESSION['user_id'] !=null):
-            ?>
-            <li class="nav__profile">
-                <div class="avatar">
-                    <img src="<?= ROOT_URL ?>/images/avatar1.jpg">
-                </div>
-                <ul>
-                    <li><a href="<?= ROOT_URL ?>admin/dashboard.php">Dashboard</a> </li>
-                    <li><a href="<?= ROOT_URL ?>logout.php">Logout</a> </li>
-                </ul>
-            </li>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <li class="nav__profile">
+                    <div class="avatar">
+                        <img src="<?= ROOT_URL.'images/'.$user['avatar'] ?>">
+                    </div>
+                    <ul>
+                        <li><a href="<?= ROOT_URL ?>admin/dashboard.php">Dashboard</a> </li>
+                        <li><a href="<?= ROOT_URL ?>logout.php">Logout</a> </li>
+                    </ul>
+                </li>
+            <?php else: ?>
+                <li><a href="<?= ROOT_URL ?>signin.php">Signin</a> </li>
             <?php endif; ?>
         </ul>
 
