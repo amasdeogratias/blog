@@ -1,107 +1,92 @@
 <?php
 include './partials/header.php';
+
+$query = "SELECT * FROM posts ORDER BY id";
+$result = mysqli_query($connect, $query);
+
+$featured_query = "SELECT * FROM posts WHERE is_featured = 1";
+$featured_result = mysqli_query($connect, $featured_query);
+$featured = mysqli_fetch_assoc($featured_result);
 ?>
+<?php if(mysqli_num_rows($featured_result) == 1) : ?>
     <section class="featured">
         <div class="container featured__container">
             <div class="post__thumbnail">
-                <img src="./images/blog1.jpg">
+                <img src="./images/<?= $featured['thumbnail'] ?>">
             </div>
             <div class="post__info">
-                <a href="category-posts.php" class="category__button">Post category</a>
-                <h2 class="post__title"><a href="post.php">Post title</a> </h2>
+                <?php 
+                    $category_id = $featured['category_id'];
+                    $category_query = "SELECT title FROM categories WHERE id=$category_id";
+                    $category_result = mysqli_query($connect, $category_query);
+                    $category = mysqli_fetch_assoc($category_result);
+                ?>
+                <a href="category-posts.php" class="category__button"><?php echo $category['title'] ?></a>
+                <h2 class="post__title"><a href="post.php"><?php echo $featured['title'] ?></a> </h2>
                 <p class="post__body">
-                    lorem ipsum dolor sit amet consectectur
+                <?php echo $featured['body'] ?>
                 </p>
                 <div class="post__author">
                     <div class="post__author-avatar">
                         <img src="./images/avatar2.jpg">
                     </div>
                     <div class="post__author-info">
-                        <h5>By: Deo Amas</h5>
-                        <small>June 10, 2022 -07:23</small>
+                        <?php
+                            $author_id = $featured['author_id'];
+                            $author_query = "SELECT firstname, lastname FROM users WHERE id=$author_id";
+                            $author_result = mysqli_query($connect, $author_query);
+                            $author = mysqli_fetch_assoc($author_result);
+                         ?>
+                        <h5><?php echo $author['firstname'] . $author['lastname'] ?></h5>
+                        <small style="color:white"><?php echo date('r', strtotime($featured['created_at'])) ?></small>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+<?php else: ?>
+    <section class="featured">
+        <div class="container featured__container">
+        </div>
+    </section>
+<?php endif; ?>
+<!--- End Featured -->
     
     <section class="posts">
         <div class="container posts__container">
+            <?php while($rows = mysqli_fetch_assoc($result)){
+                $category_id = $rows['category_id'];
+                $category_query = "SELECT title FROM categories WHERE id=$category_id";
+                $category_result = mysqli_query($connect, $category_query);
+                $category = mysqli_fetch_assoc($category_result);
+
+                $author_id = $rows['author_id'];
+                $author_query = "SELECT firstname, lastname FROM users WHERE id=$author_id";
+                $author_result = mysqli_query($connect, $author_query);
+                $author = mysqli_fetch_assoc($author_result);
+                 ?>
             <article class="post">
                 <div class="post__thumbnail">
                     <img src="./images/blog3.jpg" alt="">
                 </div>
                 <div class="post__info">
-                    <a href="category-posts.php" class="category__button">Post category</a>
-                    <h2 class="post__title"><a href="post.php">Post title</a> </h2>
+                    <a href="category-posts.php" class="category__button"><?= $category['title']?></a>
+                    <h2 class="post__title"><a href="post.php"><?= $rows['title'] ?></a> </h2>
                     <p class="post__body">
-                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, 
-                    making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, 
-                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. 
-                    Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. 
-                    This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", 
-                    comes from a line in section 1.10.32.
+                    <?= substr($rows['body'], 0,300) ?>...
                     </p>
                     <div class="post__author">
                         <div class="post__author-avatar">
                             <img src="./images/avatar3.jpg">
                         </div>
                         <div class="post__author-info">
-                            <h5>By: Deo Amas</h5>
-                            <small>June 10, 2022 -07:23</small>
+                            <h5>By: <?= $author['firstname'] . ' ' .$author['lastname'] ?></h5>
+                            <small style="color:white"><?php echo date('r', strtotime($rows['created_at'])) ?></small>
                         </div>
                     </div>
                 </div>
             </article>
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog4.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="category-posts.php" class="category__button">Post category</a>
-                    <h2 class="post__title"><a href="post.php">Post title</a> </h2>
-                    <p class="post__body">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
-                    but also the leap into electronic typesetting, remaining essentially unchanged. 
-                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar4.jpg">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Deo Amas</h5>
-                            <small>June 10, 2022 -07:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <article class="post">
-                <div class="post__thumbnail">
-                    <img src="./images/blog5.jpg" alt="">
-                </div>
-                <div class="post__info">
-                    <a href="category-posts.php" class="category__button">Post category</a>
-                    <h2 class="post__title"><a href="post.php">Post title</a> </h2>
-                    <p class="post__body">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
-                    but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of 
-                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
-                    <div class="post__author">
-                        <div class="post__author-avatar">
-                            <img src="./images/avatar5.jpg">
-                        </div>
-                        <div class="post__author-info">
-                            <h5>By: Deo Amas</h5>
-                            <small>June 10, 2022 -07:23</small>
-                        </div>
-                    </div>
-                </div>
-            </article>
+            <?php } ?>
         </div> 
     </section>
 
