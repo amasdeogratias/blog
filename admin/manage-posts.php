@@ -1,8 +1,15 @@
 <?php
 include './layouts/header.php';
 
-$query = "SELECT * FROM posts ORDER BY id";
-$post_result = mysqli_query($connect, $query);
+if(isset($_SESSION['user_is_admin'])){
+    $query = "SELECT * FROM posts ORDER BY id";
+    $post_result = mysqli_query($connect, $query);
+}else{
+    $user_id= $_SESSION['user_id'];
+    $query = "SELECT * FROM posts WHERE author_id= $user_id ORDER BY id";
+    $post_result = mysqli_query($connect, $query);
+}
+
 
 ?>
 <section class="dashboard">
