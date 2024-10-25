@@ -246,6 +246,12 @@ nav button {
     text-align: center;
 }
 
+.category__title {
+    background-color: var(--color-gray-900);
+    margin-top: 7rem;
+    text-align: center;
+}
+
 /* Blog Page Css/ Search */
 .search__bar {
     margin-top: 7rem;
