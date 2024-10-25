@@ -7,6 +7,9 @@ $result = mysqli_query($connect, $query);
 $featured_query = "SELECT * FROM posts WHERE is_featured = 1";
 $featured_result = mysqli_query($connect, $featured_query);
 $featured = mysqli_fetch_assoc($featured_result);
+
+$categories_query = "SELECT * FROM categories ORDER BY id";
+$categories_result = mysqli_query($connect, $categories_query);
 ?>
 <?php if(mysqli_num_rows($featured_result) == 1) : ?>
     <section class="featured">
@@ -67,7 +70,7 @@ $featured = mysqli_fetch_assoc($featured_result);
                  ?>
             <article class="post">
                 <div class="post__thumbnail">
-                    <img src="./images/blog3.jpg" alt="">
+                    <img src="./images/<?php echo $rows['thumbnail'] ?>" alt="">
                 </div>
                 <div class="post__info">
                     <a href="category-posts.php" class="category__button"><?= $category['title']?></a>
@@ -92,12 +95,10 @@ $featured = mysqli_fetch_assoc($featured_result);
 
     <section class="category__buttons">
         <div class="container category__buttons-container">
-            <a href="" class="category__button">Art</a>
-            <a href="" class="category__button">Music</a>
-            <a href="" class="category__button">Wild Life</a>
-            <a href="" class="category__button">Food</a>
-            <a href="" class="category__button">Science and Technology</a>
-            <a href="" class="category__button">Politics</a>
+            <?php while($rows = mysqli_fetch_assoc($categories_result)){ ?>
+            <a href="" class="category__button"><?= $rows['title'] ?></a>
+            <?php } ?>
+            
         </div>
     </section>
 <?php
