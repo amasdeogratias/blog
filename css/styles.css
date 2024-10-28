@@ -539,6 +539,15 @@ footer ul a:hover {
         align-items: center;
         gap: 2rem;
     }
+
+    .search__bar-container {
+        width: var(--container-width-md);
+    }
+
+    .singlepost__container {
+        background-color: transparent;
+        padding: 0;
+    }
 }
 
 /* GENERAL FORMS CSS */
