@@ -31,17 +31,17 @@ $categories_result = mysqli_query($connect, $categories_query);
                 </p>
                 <div class="post__author">
                     <div class="post__author-avatar">
-                        <img src="./images/avatar2.jpg">
+                        <img src="./images/<?php echo $author['avatar'] ?>" alt="">
                     </div>
                     <div class="post__author-info">
                         <?php
                             $author_id = $featured['author_id'];
-                            $author_query = "SELECT firstname, lastname FROM users WHERE id=$author_id";
+                            $author_query = "SELECT firstname, lastname, avatar FROM users WHERE id=$author_id";
                             $author_result = mysqli_query($connect, $author_query);
                             $author = mysqli_fetch_assoc($author_result);
                          ?>
                         <h5><?php echo $author['firstname'] . $author['lastname'] ?></h5>
-                        <small style="color:white"><?php echo date('r', strtotime($featured['created_at'])) ?></small>
+                        <small style="color:white"><?php echo date("M d, Y H:i", strtotime($featured['created_at'])) ?></small>
                     </div>
                 </div>
             </div>
