@@ -1,24 +1,21 @@
 <?php
-include './partials/header.php';
+require 'partials/header.php';
 
-$query = "SELECT * FROM posts ORDER BY created_at DESC";
-$result = mysqli_query($connect, $query);
+if(isset($_GET['search']) && isset($_GET['submit'])){
+    $search = filter_var($_GET['search'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $query = "SELECT * FROM posts WHERE title LIKE '%$search%' ORDER BY created_at DESC";
+    $result = mysqli_query($connect, $query);
+
+}else {
+    header("location: ".ROOT_URL."blog.php");
+    die();
+}
 
 $categories_query = "SELECT * FROM categories ORDER BY id";
 $categories_result = mysqli_query($connect, $categories_query);
 ?>
-
-    <section class="search__bar">
-        <form class="container search__bar-container" action="<?= ROOT_URL ?>search.php" method="GET">
-            <div>
-                <i class="uil uil-search"></i>
-                <input type="search" name="search" placeholder="Search">
-            </div>
-            <button type="submit" name="submit" class="btn">Go</button>
-        </form>
-    </section>
-
-    <section class="posts <?= $featured ? '' : 'section__extra-margin'?>">
+<?php if(mysqli_num_rows($result) > 0): ?>
+ <section class="posts section__extra-margin">
         <div class="container posts__container">
             <?php while($rows = mysqli_fetch_assoc($result)){
                 $category_id = $rows['category_id'];
@@ -55,6 +52,13 @@ $categories_result = mysqli_query($connect, $categories_query);
             <?php } ?>
         </div> 
     </section>
+    <?php else: ?>
+    
+    <div class="alert__message error section__extra-margin" style="text-align:center !important">
+        <p>No post found for this search</p>
+        <a href="<?=ROOT_URL?>blog.php" class="btn sm primary">Back</a>
+    </div>
+    <?php endif; ?>
 
     <section class="category__buttons">
         <div class="container category__buttons-container">
@@ -64,7 +68,6 @@ $categories_result = mysqli_query($connect, $categories_query);
             
         </div>
     </section>
-
 <?php
 include './partials/footer.php';
 ?>
