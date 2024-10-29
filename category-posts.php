@@ -20,6 +20,7 @@ if(isset($_GET['category_id'])){
     <header class="category__title">
         <h1><?php echo $category_data['title'] ?></h1>
     </header>
+    <?php if(mysqli_num_rows($result) > 0): ?>
     <section class="posts">
         <div class="container posts__container">
         <?php while($rows = mysqli_fetch_assoc($result)){
@@ -57,6 +58,13 @@ if(isset($_GET['category_id'])){
             <?php } ?>
         </div>
     </section>
+    <?php else: ?>
+    
+    <div class="alert__message error" style="text-align:center !important">
+        <p>No post found for <?= $category_data['title'] ?> Category</p>
+        <a href="<?=ROOT_URL?>" class="btn sm primary">Back</a>
+    </div>
+    <?php endif; ?>
 
 <?php
 include './partials/footer.php';
