@@ -47,15 +47,10 @@ $categories_result = mysqli_query($connect, $categories_query);
             </div>
         </div>
     </section>
-<?php else: ?>
-    <section class="featured">
-        <div class="container featured__container">
-        </div>
-    </section>
 <?php endif; ?>
 <!--- End Featured -->
     
-    <section class="posts">
+    <section class="posts <?= $featured ? '' : 'section__extra-margin'?>">
         <div class="container posts__container">
             <?php while($rows = mysqli_fetch_assoc($result)){
                 $category_id = $rows['category_id'];

@@ -209,6 +209,10 @@ nav button {
     height: fit-content;
 }
 
+.section__extra-margin {
+    margin-top: 8rem;
+}
+
 /* POSTS CSS ===*/
 .posts__container {
     display: grid;
